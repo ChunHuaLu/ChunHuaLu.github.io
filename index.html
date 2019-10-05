@@ -133,6 +133,79 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-05T17:30:15.000Z">2019-10-05</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a minute read (About 181 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/10/05/python-sort/">python_sort</a>
+            
+        </h1>
+        <div class="content">
+            <h3 id="Python-sorting"><a href="#Python-sorting" class="headerlink" title="Python sorting"></a>Python sorting</h3><blockquote>
+<p>sorted() :  returns a new list<br>list.sort() : modifies the list in-place and  only defined for list</p>
+</blockquote>
+<h4 id="Let’s-look-at-some-example"><a href="#Let’s-look-at-some-example" class="headerlink" title="Let’s look at some example :"></a>Let’s look at some example :</h4><h4 style="color:navy">using sorted()</h4>
+
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">example = [<span class="hljs-number">7</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>]</span><br><span class="line">sorted(example)</span><br><span class="line">print(example)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>example not ordered after calling sorted:<br>output : 7, 4, 3, 1, 2</p>
+</blockquote>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">after_sort = sorted(example)</span><br><span class="line">print(after_sort)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>assign to new list after_sort<br>output : 1, 2, 3, 4, 7</p>
+</blockquote>
+<h4 style="color:navy">using list.sort()</h4>
+
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">example.sort()</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>output is sorted : 1, 2, 3, 4, 7</p>
+</blockquote>
+<h4 style="color:navy"> using itemgetter() </h4>
+
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> operator <span class="hljs-keyword">import</span> itemgetter</span><br><span class="line">student = [[<span class="hljs-string">"D"</span>,<span class="hljs-number">10</span>],[<span class="hljs-string">"C"</span>,<span class="hljs-number">10</span>],[<span class="hljs-string">"B"</span>,<span class="hljs-number">10</span>],[<span class="hljs-string">"A"</span>,<span class="hljs-number">10</span>],[<span class="hljs-string">"G"</span>,<span class="hljs-number">4</span>]]</span><br><span class="line">student.sort(key=itemgetter(<span class="hljs-number">1</span>,<span class="hljs-number">0</span>))</span><br><span class="line">print(student)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>first order by number (itemgetter(1))<br>then order by alphabet ( itemgetter(0))<br>output : [[‘G’, 4], [‘A’, 10], [‘B’, 10], [‘C’, 10], [‘D’, 10]]</p>
+</blockquote>
+<p> <a href="https://www.hackerrank.com/challenges/nested-list/problem" target="_blank" rel="noopener">hackerrank :</a></p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> operator <span class="hljs-keyword">import</span> itemgetter</span><br><span class="line">store_stu = []</span><br><span class="line">min = <span class="hljs-number">1000</span></span><br><span class="line"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:</span><br><span class="line">    <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(int(input())):</span><br><span class="line">        name = input()</span><br><span class="line">        score = float(input())</span><br><span class="line">        <span class="hljs-keyword">if</span> score &lt; min:</span><br><span class="line">            min = score</span><br><span class="line">        store_stu.append([name,score] )</span><br><span class="line">    store_stu = sorted(store_stu, key = itemgetter(<span class="hljs-number">1</span>,<span class="hljs-number">0</span>) )</span><br><span class="line">    flag_small = <span class="hljs-number">0</span></span><br><span class="line">    <span class="hljs-keyword">for</span> i,j <span class="hljs-keyword">in</span> store_stu:</span><br><span class="line">        <span class="hljs-keyword">if</span> j &gt; min <span class="hljs-keyword">and</span> flag_small==<span class="hljs-number">0</span>:</span><br><span class="line">            flag_small = j</span><br><span class="line">    <span class="hljs-keyword">if</span> flag_small == <span class="hljs-number">0</span>:</span><br><span class="line">        flag_small = min</span><br><span class="line">    <span class="hljs-keyword">for</span> i,j <span class="hljs-keyword">in</span> store_stu:</span><br><span class="line">        <span class="hljs-keyword">if</span> j == flag_small:</span><br><span class="line">            print(i)</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-10-01T17:32:08.000Z">2019-10-01</time>
                 
                 
@@ -402,7 +475,7 @@ topology sorting
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        4
+                        5
                     </p>
                 </div>
             </div>
@@ -422,7 +495,7 @@ topology sorting
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        4
+                        5
                     </p>
                 </div>
             </div>
@@ -534,7 +607,7 @@ topology sorting
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/AboutMe/" style="font-size: 10px;">AboutMe</a> <a href="/tags/drawing/" style="font-size: 10px;">drawing</a> <a href="/tags/lintcode/" style="font-size: 10px;">lintcode</a> <a href="/tags/python/" style="font-size: 10px;">python</a>
+        <a href="/tags/AboutMe/" style="font-size: 10px;">AboutMe</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/drawing/" style="font-size: 10px;">drawing</a> <a href="/tags/lintcode/" style="font-size: 10px;">lintcode</a> <a href="/tags/python/" style="font-size: 20px;">python</a>
     </div>
 </div>
     
@@ -546,6 +619,25 @@ topology sorting
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/10/05/python-sort/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="python_sort">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-05T17:30:15.000Z">2019-10-05</time></div>
+                    <a href="/2019/10/05/python-sort/" class="title has-link-black-ter is-size-6 has-text-weight-normal">python_sort</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -640,7 +732,7 @@ topology sorting
                     <span class="level-item">October 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -677,6 +769,13 @@ topology sorting
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/algorithm/">
+                        <span class="tag">algorithm</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/drawing/">
                         <span class="tag">drawing</span>
                         <span class="tag is-grey">1</span>
@@ -693,7 +792,7 @@ topology sorting
                 <div class="control">
                     <a class="tags has-addons" href="/tags/python/">
                         <span class="tag">python</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -721,6 +820,25 @@ topology sorting
         
         <article class="media">
             
+            <a href="/2019/10/05/python-sort/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="python_sort">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-05T17:30:15.000Z">2019-10-05</time></div>
+                    <a href="/2019/10/05/python-sort/" class="title has-link-black-ter is-size-6 has-text-weight-normal">python_sort</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/10/01/About-me/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="About me">
@@ -812,7 +930,7 @@ topology sorting
                     <span class="level-item">October 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -849,6 +967,13 @@ topology sorting
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/algorithm/">
+                        <span class="tag">algorithm</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/drawing/">
                         <span class="tag">drawing</span>
                         <span class="tag is-grey">1</span>
@@ -865,7 +990,7 @@ topology sorting
                 <div class="control">
                     <a class="tags has-addons" href="/tags/python/">
                         <span class="tag">python</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 

@@ -7,22 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>2019/9/27 - Ninjacat blog</title>
+<title>python_sort - Ninjacat blog</title>
 
 
-    <meta name="description" content="I draw in my free time">
-<meta name="keywords" content="drawing">
+    <meta name="description" content="Python sorting sorted() :  returns a new listlist.sort() : modifies the list in-place and  only defined for list  Let’s look at some example :using sorted()  123example = [7,4,3,1,2]sorted(example)pri">
+<meta name="keywords" content="python,algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2019&#x2F;9&#x2F;27">
-<meta property="og:url" content="http://yoursite.com/2019/09/27/2019-9-27/index.html">
+<meta property="og:title" content="python_sort">
+<meta property="og:url" content="http://yoursite.com/2019/10/05/python-sort/index.html">
 <meta property="og:site_name" content="Ninjacat blog">
-<meta property="og:description" content="I draw in my free time">
+<meta property="og:description" content="Python sorting sorted() :  returns a new listlist.sort() : modifies the list in-place and  only defined for list  Let’s look at some example :using sorted()  123example = [7,4,3,1,2]sorted(example)pri">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-28T01:40:36.146Z">
+<meta property="og:updated_time" content="2019-10-05T19:29:45.166Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2019&#x2F;9&#x2F;27">
-<meta name="twitter:description" content="I draw in my free time">
+<meta name="twitter:title" content="python_sort">
+<meta name="twitter:description" content="Python sorting sorted() :  returns a new listlist.sort() : modifies the list in-place and  only defined for list  Let’s look at some example :using sorted()  123example = [7,4,3,1,2]sorted(example)pri">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -81,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="2019/9/27" height="28">
+                <img src="/images/logo.svg" alt="python_sort" height="28">
             
             </a>
         </div>
@@ -137,13 +137,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-28T00:22:04.000Z">2019-09-27</time>
+                <time class="level-item has-text-grey" datetime="2019-10-05T17:30:15.000Z">2019-10-05</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 14 words)
+                    a minute read (About 181 words)
                 </span>
                 
                 
@@ -152,11 +152,42 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                2019/9/27
+                python_sort
             
         </h1>
         <div class="content">
-            <h3 id="I-draw-in-my-free-time"><a href="#I-draw-in-my-free-time" class="headerlink" title="I draw in my free time"></a>I draw in my free time</h3><p><img src="https://i.imgur.com/C0I0gcv.jpg" alt></p>
+            <h3 id="Python-sorting"><a href="#Python-sorting" class="headerlink" title="Python sorting"></a>Python sorting</h3><blockquote>
+<p>sorted() :  returns a new list<br>list.sort() : modifies the list in-place and  only defined for list</p>
+</blockquote>
+<h4 id="Let’s-look-at-some-example"><a href="#Let’s-look-at-some-example" class="headerlink" title="Let’s look at some example :"></a>Let’s look at some example :</h4><h4 style="color:navy">using sorted()</h4>
+
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">example = [<span class="hljs-number">7</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>]</span><br><span class="line">sorted(example)</span><br><span class="line">print(example)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>example not ordered after calling sorted:<br>output : 7, 4, 3, 1, 2</p>
+</blockquote>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">after_sort = sorted(example)</span><br><span class="line">print(after_sort)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>assign to new list after_sort<br>output : 1, 2, 3, 4, 7</p>
+</blockquote>
+<h4 style="color:navy">using list.sort()</h4>
+
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">example.sort()</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>output is sorted : 1, 2, 3, 4, 7</p>
+</blockquote>
+<h4 style="color:navy"> using itemgetter() </h4>
+
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> operator <span class="hljs-keyword">import</span> itemgetter</span><br><span class="line">student = [[<span class="hljs-string">"D"</span>,<span class="hljs-number">10</span>],[<span class="hljs-string">"C"</span>,<span class="hljs-number">10</span>],[<span class="hljs-string">"B"</span>,<span class="hljs-number">10</span>],[<span class="hljs-string">"A"</span>,<span class="hljs-number">10</span>],[<span class="hljs-string">"G"</span>,<span class="hljs-number">4</span>]]</span><br><span class="line">student.sort(key=itemgetter(<span class="hljs-number">1</span>,<span class="hljs-number">0</span>))</span><br><span class="line">print(student)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>first order by number (itemgetter(1))<br>then order by alphabet ( itemgetter(0))<br>output : [[‘G’, 4], [‘A’, 10], [‘B’, 10], [‘C’, 10], [‘D’, 10]]</p>
+</blockquote>
+<p> <a href="https://www.hackerrank.com/challenges/nested-list/problem" target="_blank" rel="noopener">hackerrank :</a></p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> operator <span class="hljs-keyword">import</span> itemgetter</span><br><span class="line">store_stu = []</span><br><span class="line">min = <span class="hljs-number">1000</span></span><br><span class="line"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:</span><br><span class="line">    <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(int(input())):</span><br><span class="line">        name = input()</span><br><span class="line">        score = float(input())</span><br><span class="line">        <span class="hljs-keyword">if</span> score &lt; min:</span><br><span class="line">            min = score</span><br><span class="line">        store_stu.append([name,score] )</span><br><span class="line">    store_stu = sorted(store_stu, key = itemgetter(<span class="hljs-number">1</span>,<span class="hljs-number">0</span>) )</span><br><span class="line">    flag_small = <span class="hljs-number">0</span></span><br><span class="line">    <span class="hljs-keyword">for</span> i,j <span class="hljs-keyword">in</span> store_stu:</span><br><span class="line">        <span class="hljs-keyword">if</span> j &gt; min <span class="hljs-keyword">and</span> flag_small==<span class="hljs-number">0</span>:</span><br><span class="line">            flag_small = j</span><br><span class="line">    <span class="hljs-keyword">if</span> flag_small == <span class="hljs-number">0</span>:</span><br><span class="line">        flag_small = min</span><br><span class="line">    <span class="hljs-keyword">for</span> i,j <span class="hljs-keyword">in</span> store_stu:</span><br><span class="line">        <span class="hljs-keyword">if</span> j == flag_small:</span><br><span class="line">            print(i)</span><br></pre></td></tr></table></figure>
+
 
         </div>
         
@@ -164,7 +195,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/drawing/">drawing</a>
+                    <a class="has-link-grey -link" href="/tags/algorithm/">algorithm</a>, <a class="has-link-grey -link" href="/tags/python/">python</a>
                 </div>
             </div>
         </div>
@@ -181,17 +212,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/30/lintcode-615/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">lintcode-615</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/27/hello-world/">
-                <span class="level-item">Hello World</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/01/About-me/">
+                <span class="level-item">About me</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -780,7 +804,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="2019/9/27" height="28">
+                    <img src="/images/logo.svg" alt="python_sort" height="28">
                 
                 </a>
                 <p class="is-size-7">
